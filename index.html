@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate To Win!</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <!-- show before you start the gmae -->
+    <div class="before-start-container">
+      <div class="before-start">
+        <section class="intro-heading">
+          <h1>Outsmart your friend! <span class="emoji-heading"> 😄 </span></h1>
+        </section>
+        <section class="game-options">
+          <button id="start-game" class="game-toggler">start</button>
+        </section>
+        <section class="game-rules">
+          <ul class="rules">
+            <h2>Rules are simple!</h2>
+            <li>Get the math right earn points.</li>
+            <li>Get more points than the other person in order to win.</li>
+            <li>
+              You'll have a certain amount of time to get the question right.
+            </li>
+            <li>
+              <label for="numberInput"
+                >Select to what score you want to play to default is 10</label
+              >
+              <br />
+              <input type="number" name="numberInput" id="numberInput" />
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <!-- show after you start the game -->
+    <div class="game-container hidden">
+      <nav class="main-nav">
+        <ul>
+          <button id="reset-game">Reset</button>
+          <div class="score-goal">
+            <h1 class="final-score">
+              <span class="score-bg" id="finalNum"> 0 </span>
+            </h1>
+          </div>
+          <button id="quit-game" class="game-toggler">Quit</button>
+        </ul>
+      </nav>
+
+      <main id="container">
+        <div class="player-wrapper">
+          <div class="player-1 players active-player">
+            <section class="points points-p1">
+              <h2>0</h2>
+            </section>
+
+            <section class="math-problem-selector">
+              <h2 class="math-problem problem-p1">X+X</h2>
+            </section>
+            <label for="solution-p1" class="solution-label"
+              >Enter Your Solution:</label
+            >
+            <input
+              type="text"
+              name="solution-p1"
+              id="solution-p1"
+              class="solution-input input-p1"
+            />
+            <button type="submit" class="submit-btns sub-p1">
+              Submit Your Answer!
+            </button>
+          </div>
+          <div class="player-2 players">
+            <section class="points points-p2">
+              <h2>0</h2>
+            </section>
+            <section class="math-problem-selector">
+              <h2 class="math-problem problem-p2">X+X</h2>
+            </section>
+            <label for="solution-p2" class="solution-label"
+              >Enter Your Solution:</label
+            >
+            <input
+              type="text"
+              name="solution-p2"
+              id="solution=p2"
+              class="solution-input input-p2"
+            />
+            <button type="submit" disabled class="submit-btns sub-p2">
+              Submit Your Answer!
+            </button>
+          </div>
+        </div>
+      </main>
+      <footer class="footer-creator">Dejan Latinoski</footer>
+    </div>
+  </body>
+</html>
